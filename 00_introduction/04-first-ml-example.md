@@ -8,7 +8,7 @@
 
 Pick the sample that matches your environment:
 
-**Google Colab**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/CS-6140-ML-Fall-2025/TA-Classes/blob/main/introduction/samples/colab-sample.ipynb)
+**Google Colab**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/CS-6140-ML-Learning-Sessions/Machine-Learning-101/blob/main/00_introduction/samples/colab-sample.ipynb)
 
 **Jupyter Notebook**: [Download jupyter-sample.ipynb](samples/jupyter-sample.ipynb)
 
