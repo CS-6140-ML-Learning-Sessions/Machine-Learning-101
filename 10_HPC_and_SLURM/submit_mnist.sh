@@ -26,7 +26,7 @@ module load anaconda3/2024.06
 module load cuda/12.1
 
 # Activate Conda environment
-source activate /home/$USER/envs/ml101
+conda activate /home/$USER/envs/ml101
 
 # Print environment info for debugging
 python -c "import torch; print(f'PyTorch {torch.__version__}, CUDA available: {torch.cuda.is_available()}')"

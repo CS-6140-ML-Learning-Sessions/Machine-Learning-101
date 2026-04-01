@@ -18,7 +18,7 @@
   <text x="36" y="146" font-size="12" fill="#78350f" font-family="monospace">#SBATCH --time=04:00:00</text>
   <line x1="36" y1="156" x2="314" y2="156" stroke="#fde68a" stroke-width="1"/>
   <text x="36" y="174" font-size="12" fill="#78350f" font-family="monospace">module load anaconda3/2024.06</text>
-  <text x="36" y="194" font-size="12" fill="#78350f" font-family="monospace">source activate ~/envs/ml101</text>
+  <text x="36" y="194" font-size="12" fill="#78350f" font-family="monospace">conda activate ml101</text>
   <line x1="36" y1="204" x2="314" y2="204" stroke="#fde68a" stroke-width="1"/>
   <text x="36" y="224" font-size="12" fill="#92400e" font-family="monospace" font-weight="700">python your_code.py</text>
 
