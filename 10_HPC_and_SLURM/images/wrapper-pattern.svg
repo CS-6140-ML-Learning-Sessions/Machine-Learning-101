@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 260" font-family="-apple-system, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#6366f1"/>
+    </marker>
+  </defs>
+
+  <rect width="780" height="260" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="390" y="32" text-anchor="middle" font-size="17" font-weight="700" fill="#1e293b">The Wrapper Pattern: Every HPC Job</text>
+
+  <!-- Shell Wrapper -->
+  <rect x="20" y="50" width="310" height="192" rx="10" fill="#fff" stroke="#f59e0b" stroke-width="1.5"/>
+  <rect x="20" y="50" width="310" height="32" rx="10" fill="#f59e0b"/>
+  <text x="175" y="72" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">submit_job.sh  (the wrapper)</text>
+
+  <text x="36" y="106" font-size="12" fill="#78350f" font-family="monospace">#SBATCH --partition=gpu</text>
+  <text x="36" y="126" font-size="12" fill="#78350f" font-family="monospace">#SBATCH --gres=gpu:v100-sxm2:1</text>
+  <text x="36" y="146" font-size="12" fill="#78350f" font-family="monospace">#SBATCH --time=04:00:00</text>
+  <line x1="36" y1="156" x2="314" y2="156" stroke="#fde68a" stroke-width="1"/>
+  <text x="36" y="174" font-size="12" fill="#78350f" font-family="monospace">module load anaconda3/2024.06</text>
+  <text x="36" y="194" font-size="12" fill="#78350f" font-family="monospace">source activate ~/envs/ml101</text>
+  <line x1="36" y1="204" x2="314" y2="204" stroke="#fde68a" stroke-width="1"/>
+  <text x="36" y="224" font-size="12" fill="#92400e" font-family="monospace" font-weight="700">python your_code.py</text>
+
+  <!-- Arrow -->
+  <line x1="342" y1="146" x2="436" y2="146" stroke="#6366f1" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="389" y="136" text-anchor="middle" font-size="11" font-weight="600" fill="#6366f1">calls</text>
+
+  <!-- Python Script -->
+  <rect x="448" y="50" width="312" height="192" rx="10" fill="#fff" stroke="#6366f1" stroke-width="1.5"/>
+  <rect x="448" y="50" width="312" height="32" rx="10" fill="#6366f1"/>
+  <text x="604" y="72" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">your_code.py  (the work)</text>
+
+  <text x="464" y="106" font-size="12" fill="#312e81" font-family="monospace">import torch</text>
+  <text x="464" y="126" font-size="12" fill="#312e81" font-family="monospace">model = NeuralNetwork()</text>
+  <text x="464" y="146" font-size="12" fill="#312e81" font-family="monospace">for epoch in range(...):</text>
+  <text x="464" y="166" font-size="12" fill="#312e81" font-family="monospace">    train(model, data)</text>
+  <text x="464" y="186" font-size="12" fill="#312e81" font-family="monospace">    test(model, data)</text>
+  <text x="464" y="206" font-size="12" fill="#312e81" font-family="monospace">torch.save(model, ...)</text>
+
+  <text x="604" y="232" text-anchor="middle" font-size="9" fill="#6b7280" font-style="italic">Runs the same on laptop or cluster</text>
+</svg>

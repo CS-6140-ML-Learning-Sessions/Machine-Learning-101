@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 300" font-family="-apple-system, 'Segoe UI', Arial, sans-serif">
+  <rect width="780" height="300" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="390" y="32" text-anchor="middle" font-size="17" font-weight="700" fill="#1e293b">Explorer Storage Layout</text>
+
+  <!-- /home -->
+  <rect x="20" y="52" width="240" height="232" rx="10" fill="#fff" stroke="#6366f1" stroke-width="1.5"/>
+  <rect x="20" y="52" width="240" height="32" rx="10" fill="#6366f1"/>
+  <text x="140" y="74" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">/home/$USER</text>
+  <rect x="36" y="96" width="208" height="22" rx="4" fill="#eef2ff"/>
+  <text x="46" y="112" font-size="11" font-weight="600" fill="#4338ca">~50 GB</text>
+  <text x="130" y="112" font-size="10" fill="#6366f1">NFS (slower)</text>
+  <text x="36" y="142" font-size="11" fill="#475569">&#x2713; Code and scripts</text>
+  <text x="36" y="162" font-size="11" fill="#475569">&#x2713; Conda environments</text>
+  <text x="36" y="182" font-size="11" fill="#475569">&#x2713; Config files</text>
+  <text x="36" y="202" font-size="11" fill="#475569">&#x2713; Small results</text>
+  <rect x="36" y="220" width="208" height="24" rx="5" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+  <text x="140" y="237" text-anchor="middle" font-size="10" font-weight="600" fill="#15803d">Never purged</text>
+  <text x="140" y="264" text-anchor="middle" font-size="9" fill="#6366f1" font-style="italic">check-quota /home/$USER</text>
+
+  <!-- /scratch -->
+  <rect x="270" y="52" width="240" height="232" rx="10" fill="#fff" stroke="#f59e0b" stroke-width="1.5"/>
+  <rect x="270" y="52" width="240" height="32" rx="10" fill="#f59e0b"/>
+  <text x="390" y="74" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">/scratch/$USER</text>
+  <rect x="286" y="96" width="208" height="22" rx="4" fill="#fffbeb"/>
+  <text x="296" y="112" font-size="11" font-weight="600" fill="#b45309">~10 TB</text>
+  <text x="380" y="112" font-size="10" fill="#d97706">Lustre (fast)</text>
+  <text x="286" y="142" font-size="11" fill="#475569">&#x2713; Large datasets</text>
+  <text x="286" y="162" font-size="11" fill="#475569">&#x2713; Training output</text>
+  <text x="286" y="182" font-size="11" fill="#475569">&#x2713; Model checkpoints</text>
+  <text x="286" y="202" font-size="11" fill="#475569">&#x2713; Temporary files</text>
+  <rect x="286" y="220" width="208" height="24" rx="5" fill="#fef2f2" stroke="#fca5a5" stroke-width="1"/>
+  <text x="390" y="237" text-anchor="middle" font-size="10" font-weight="600" fill="#dc2626">Purged each semester!</text>
+  <text x="390" y="264" text-anchor="middle" font-size="9" fill="#b45309" font-style="italic">Move results when jobs finish</text>
+
+  <!-- /courses -->
+  <rect x="520" y="52" width="240" height="232" rx="10" fill="#fff" stroke="#10b981" stroke-width="1.5"/>
+  <rect x="520" y="52" width="240" height="32" rx="10" fill="#10b981"/>
+  <text x="640" y="74" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">/courses/CS6140.202630</text>
+  <rect x="536" y="96" width="208" height="22" rx="4" fill="#ecfdf5"/>
+  <text x="546" y="112" font-size="11" font-weight="600" fill="#065f46">1 TB</text>
+  <text x="590" y="112" font-size="10" fill="#10b981">Per course</text>
+  <text x="536" y="142" font-size="11" fill="#475569">&#x2713; data/ (read-only)</text>
+  <text x="536" y="162" font-size="11" fill="#475569">&#x2713; shared/ (read-only)</text>
+  <text x="536" y="182" font-size="11" fill="#475569">&#x2713; staff/ (TAs, instructor)</text>
+  <text x="536" y="202" font-size="11" fill="#475569">&#x2713; students/you/ (private)</text>
+  <rect x="536" y="220" width="208" height="24" rx="5" fill="#fefce8" stroke="#fde047" stroke-width="1"/>
+  <text x="640" y="237" text-anchor="middle" font-size="10" font-weight="600" fill="#a16207">Archived after course</text>
+  <text x="640" y="264" text-anchor="middle" font-size="9" fill="#065f46" font-style="italic">Students lose access after term</text>
+</svg>

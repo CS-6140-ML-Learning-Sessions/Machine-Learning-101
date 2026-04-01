@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 310" font-family="-apple-system, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#6366f1"/>
+    </marker>
+    <clipPath id="shelfClip"><rect x="20" y="54" width="316" height="238" rx="10"/></clipPath>
+    <clipPath id="benchClip"><rect x="464" y="54" width="316" height="238" rx="10"/></clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="310" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="400" y="34" text-anchor="middle" font-size="17" font-weight="700" fill="#1e293b">The Module System: Software on Demand</text>
+
+  <!-- ===== Shelf (module avail) ===== -->
+  <rect x="20" y="54" width="316" height="238" rx="10" fill="#fff" stroke="#94a3b8" stroke-width="1.5"/>
+  <!-- Header clipped to card shape -->
+  <g clip-path="url(#shelfClip)">
+    <rect x="20" y="54" width="316" height="34" fill="#94a3b8"/>
+  </g>
+  <text x="178" y="77" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">The Shelf  (module avail)</text>
+
+  <!-- Highlighted modules (the ones we'll load) -->
+  <rect x="38" y="102" width="138" height="30" rx="6" fill="#dbeafe" stroke="#93c5fd" stroke-width="1"/>
+  <text x="107" y="122" text-anchor="middle" font-size="10" font-weight="600" fill="#1e40af">anaconda3/2024.06</text>
+  <rect x="190" y="102" width="138" height="30" rx="6" fill="#dbeafe" stroke="#93c5fd" stroke-width="1"/>
+  <text x="259" y="122" text-anchor="middle" font-size="10" font-weight="600" fill="#1e40af">cuda/12.1</text>
+
+  <!-- Other modules (dimmed) -->
+  <rect x="38" y="146" width="138" height="30" rx="6" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="107" y="166" text-anchor="middle" font-size="10" fill="#94a3b8">python/3.9</text>
+  <rect x="190" y="146" width="138" height="30" rx="6" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="259" y="166" text-anchor="middle" font-size="10" fill="#94a3b8">cuda/11.8</text>
+
+  <rect x="38" y="190" width="138" height="30" rx="6" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="107" y="210" text-anchor="middle" font-size="10" fill="#94a3b8">gcc/12.2</text>
+  <rect x="190" y="190" width="138" height="30" rx="6" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="259" y="210" text-anchor="middle" font-size="10" fill="#94a3b8">openmpi/4.1</text>
+
+  <text x="178" y="252" text-anchor="middle" font-size="10" fill="#94a3b8" font-style="italic">Hundreds of versions available...</text>
+
+  <!-- ===== Arrow ===== -->
+  <line x1="348" y1="170" x2="450" y2="170" stroke="#6366f1" stroke-width="2.5" marker-end="url(#arr)"/>
+  <rect x="370" y="146" width="58" height="20" rx="4" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1"/>
+  <text x="399" y="160" text-anchor="middle" font-size="10" font-weight="700" fill="#4f46e5">module</text>
+  <text x="399" y="140" text-anchor="middle" font-size="10" font-weight="700" fill="#4f46e5">load</text>
+
+  <!-- ===== Workbench (module list) ===== -->
+  <rect x="464" y="54" width="316" height="238" rx="10" fill="#fff" stroke="#10b981" stroke-width="1.5"/>
+  <g clip-path="url(#benchClip)">
+    <rect x="464" y="54" width="316" height="34" fill="#10b981"/>
+  </g>
+  <text x="622" y="77" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">Your Workbench  (module list)</text>
+
+  <!-- Loaded: anaconda3 -->
+  <rect x="480" y="102" width="284" height="44" rx="7" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1"/>
+  <text x="494" y="121" font-size="11" font-weight="600" fill="#065f46">anaconda3/2024.06</text>
+  <text x="494" y="138" font-size="10" fill="#047857">conda, python, pip now in $PATH</text>
+
+  <!-- Loaded: cuda -->
+  <rect x="480" y="158" width="284" height="44" rx="7" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1"/>
+  <text x="494" y="177" font-size="11" font-weight="600" fill="#065f46">cuda/12.1</text>
+  <text x="494" y="194" font-size="10" fill="#047857">nvcc, CUDA libs in $LD_LIBRARY_PATH</text>
+
+  <!-- Warning -->
+  <rect x="480" y="218" width="284" height="44" rx="7" fill="#fef2f2" stroke="#fca5a5" stroke-width="1"/>
+  <text x="494" y="237" font-size="11" font-weight="600" fill="#dc2626">Without module load:</text>
+  <text x="494" y="254" font-size="11" fill="#b91c1c" font-family="monospace">conda: command not found</text>
+</svg>

@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 440" font-family="-apple-system, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <clipPath id="laptopClip"><rect x="20" y="48" width="250" height="374" rx="10"/></clipPath>
+    <clipPath id="clusterClip"><rect x="380" y="48" width="440" height="374" rx="10"/></clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="840" height="440" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="420" y="32" text-anchor="middle" font-size="17" font-weight="700" fill="#1e293b">Your First Explorer Workflow</text>
+
+  <!-- ===== Local Machine ===== -->
+  <rect x="20" y="48" width="250" height="374" rx="10" fill="#fff" stroke="#94a3b8" stroke-width="1.5"/>
+  <g clip-path="url(#laptopClip)"><rect x="20" y="48" width="250" height="34" fill="#64748b"/></g>
+  <text x="145" y="71" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">Your Laptop</text>
+
+  <!-- Step 1 -->
+  <rect x="36" y="98" width="218" height="44" rx="7" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1"/>
+  <circle cx="54" cy="120" r="12" fill="#6366f1"/>
+  <text x="54" y="124" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">1</text>
+  <text x="76" y="113" font-size="11" font-weight="600" fill="#4338ca">Write Python script</text>
+  <text x="76" y="130" font-size="10" fill="#6366f1" font-family="monospace">train_mnist.py</text>
+
+  <!-- Step 2 -->
+  <rect x="36" y="154" width="218" height="44" rx="7" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1"/>
+  <circle cx="54" cy="176" r="12" fill="#6366f1"/>
+  <text x="54" y="180" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">2</text>
+  <text x="76" y="169" font-size="11" font-weight="600" fill="#4338ca">Write SLURM wrapper</text>
+  <text x="76" y="186" font-size="10" fill="#6366f1" font-family="monospace">submit_mnist.sh</text>
+
+  <!-- Upload: bracket from steps 1+2, arrow to cluster -->
+  <path d="M 256 120 L 270 120 L 270 176 L 256 176" fill="none" stroke="#6366f1" stroke-width="1.5"/>
+  <line x1="270" y1="148" x2="370" y2="148" stroke="#6366f1" stroke-width="2"/>
+  <polygon points="370 143, 380 148, 370 153" fill="#6366f1"/>
+  <text x="325" y="140" text-anchor="middle" font-size="9" fill="#6366f1" font-weight="600">scp / rsync</text>
+
+  <!-- Waiting -->
+  <text x="145" y="240" text-anchor="middle" font-size="11" fill="#94a3b8" font-style="italic">Wait for job</text>
+  <text x="145" y="256" text-anchor="middle" font-size="11" fill="#94a3b8" font-style="italic">to complete...</text>
+  <line x1="145" y1="270" x2="145" y2="348" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+  <!-- Step 8 -->
+  <rect x="36" y="360" width="218" height="44" rx="7" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1"/>
+  <circle cx="54" cy="382" r="12" fill="#10b981"/>
+  <text x="54" y="386" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">8</text>
+  <text x="76" y="375" font-size="11" font-weight="600" fill="#065f46">Download results</text>
+  <text x="76" y="392" font-size="10" fill="#10b981" font-family="monospace">scp model.pt ./</text>
+
+  <!-- Download: arrow from cluster to laptop -->
+  <line x1="380" y1="382" x2="280" y2="382" stroke="#10b981" stroke-width="2"/>
+  <polygon points="280 377, 270 382, 280 387" fill="#10b981"/>
+  <text x="330" y="374" text-anchor="middle" font-size="9" fill="#10b981" font-weight="600">scp</text>
+
+  <!-- ===== Explorer Cluster ===== -->
+  <rect x="380" y="48" width="440" height="374" rx="10" fill="#fff" stroke="#10b981" stroke-width="1.5"/>
+  <g clip-path="url(#clusterClip)"><rect x="380" y="48" width="440" height="34" fill="#10b981"/></g>
+  <text x="600" y="71" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">Explorer Cluster</text>
+
+  <!-- Step 3 -->
+  <rect x="396" y="98" width="408" height="44" rx="7" fill="#fefce8" stroke="#fde68a" stroke-width="1"/>
+  <circle cx="414" cy="120" r="12" fill="#f59e0b"/>
+  <text x="414" y="124" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">3</text>
+  <text x="436" y="113" font-size="11" font-weight="600" fill="#92400e">SSH into cluster</text>
+  <text x="436" y="130" font-size="9" fill="#b45309" font-family="monospace">ssh user@login.explorer.northeastern.edu</text>
+
+  <!-- Down arrow 3 -> 4 -->
+  <line x1="414" y1="142" x2="414" y2="155" stroke="#94a3b8" stroke-width="1.5"/>
+  <polygon points="409 155, 414 163, 419 155" fill="#94a3b8"/>
+
+  <!-- Step 4 -->
+  <rect x="396" y="164" width="408" height="44" rx="7" fill="#fefce8" stroke="#fde68a" stroke-width="1"/>
+  <circle cx="414" cy="186" r="12" fill="#f59e0b"/>
+  <text x="414" y="190" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">4</text>
+  <text x="436" y="179" font-size="11" font-weight="600" fill="#92400e">Submit job</text>
+  <text x="436" y="196" font-size="10" fill="#b45309" font-family="monospace">sbatch submit_mnist.sh</text>
+
+  <!-- Down arrow 4 -> 5/6 (splits) -->
+  <line x1="414" y1="208" x2="414" y2="221" stroke="#94a3b8" stroke-width="1.5"/>
+  <polygon points="409 221, 414 229, 419 221" fill="#94a3b8"/>
+  <line x1="414" y1="216" x2="626" y2="216" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="626" y1="216" x2="626" y2="221" stroke="#94a3b8" stroke-width="1.5"/>
+  <polygon points="621 221, 626 229, 631 221" fill="#94a3b8"/>
+
+  <!-- Step 5 -->
+  <rect x="396" y="230" width="196" height="44" rx="7" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1"/>
+  <circle cx="414" cy="252" r="12" fill="#10b981"/>
+  <text x="414" y="256" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">5</text>
+  <text x="436" y="245" font-size="11" font-weight="600" fill="#065f46">Monitor</text>
+  <text x="436" y="262" font-size="10" fill="#047857" font-family="monospace">squeue -u $USER</text>
+
+  <!-- Step 6 -->
+  <rect x="608" y="230" width="196" height="44" rx="7" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1"/>
+  <circle cx="626" cy="252" r="12" fill="#10b981"/>
+  <text x="626" y="256" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">6</text>
+  <text x="648" y="245" font-size="11" font-weight="600" fill="#065f46">Watch logs</text>
+  <text x="648" y="262" font-size="10" fill="#047857" font-family="monospace">tail -f *.out</text>
+
+  <!-- Down arrow 5 -> 7 -->
+  <line x1="414" y1="274" x2="414" y2="290" stroke="#94a3b8" stroke-width="1.5"/>
+  <polygon points="409 290, 414 298, 419 290" fill="#94a3b8"/>
+
+  <!-- Step 7 -->
+  <rect x="396" y="300" width="408" height="44" rx="7" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1"/>
+  <circle cx="414" cy="322" r="12" fill="#10b981"/>
+  <text x="414" y="326" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">7</text>
+  <text x="436" y="315" font-size="11" font-weight="600" fill="#065f46">Job completes</text>
+  <text x="436" y="332" font-size="10" fill="#047857" font-family="monospace">Output: model.pt, mnist_123456.out</text>
+</svg>

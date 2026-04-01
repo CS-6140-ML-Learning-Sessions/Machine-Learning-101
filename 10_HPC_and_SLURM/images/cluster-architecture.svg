@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 400" font-family="-apple-system, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#6366f1"/>
+    </marker>
+  </defs>
+
+  <rect width="880" height="400" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="440" y="32" text-anchor="middle" font-size="17" font-weight="700" fill="#1e293b">Explorer Cluster Architecture</text>
+
+  <!-- You -->
+  <rect x="24" y="130" width="130" height="130" rx="10" fill="#fff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="89" y="172" text-anchor="middle" font-size="14" font-weight="600" fill="#334155">You</text>
+  <text x="89" y="192" text-anchor="middle" font-size="11" fill="#64748b">Laptop / Desktop</text>
+  <rect x="49" y="208" width="80" height="24" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="89" y="225" text-anchor="middle" font-size="10" fill="#475569">SSH / OOD</text>
+
+  <!-- Arrow You -> Login -->
+  <line x1="154" y1="195" x2="234" y2="195" stroke="#6366f1" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Login Node -->
+  <rect x="246" y="90" width="190" height="210" rx="10" fill="#fff" stroke="#f59e0b" stroke-width="1.5"/>
+  <rect x="246" y="90" width="190" height="34" rx="10" fill="#f59e0b"/>
+  <text x="341" y="113" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">Login Node</text>
+  <text x="264" y="148" font-size="11" fill="#78350f">&#x2713; Edit files</text>
+  <text x="264" y="168" font-size="11" fill="#78350f">&#x2713; Submit jobs (sbatch)</text>
+  <text x="264" y="188" font-size="11" fill="#78350f">&#x2713; Check status (squeue)</text>
+  <text x="264" y="208" font-size="11" fill="#78350f">&#x2713; Transfer files</text>
+  <rect x="261" y="224" width="160" height="28" rx="5" fill="#fef9c3" stroke="#eab308" stroke-width="1"/>
+  <text x="341" y="243" text-anchor="middle" font-size="11" font-weight="700" fill="#b45309">&#x26A0; NO training here!</text>
+  <text x="341" y="278" text-anchor="middle" font-size="9" fill="#a16207" font-style="italic">Bots monitor login node usage</text>
+
+  <!-- Arrow Login -> Compute -->
+  <line x1="436" y1="195" x2="500" y2="195" stroke="#6366f1" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="468" y="185" text-anchor="middle" font-size="10" font-weight="600" fill="#6366f1">SLURM</text>
+
+  <!-- Compute Nodes -->
+  <rect x="512" y="50" width="344" height="330" rx="10" fill="#ecfdf5" stroke="#10b981" stroke-width="1.5"/>
+  <rect x="512" y="50" width="344" height="34" rx="10" fill="#10b981"/>
+  <text x="684" y="73" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">Compute Nodes</text>
+  <text x="684" y="100" text-anchor="middle" font-size="11" fill="#065f46" font-weight="600">YOUR CODE RUNS HERE</text>
+
+  <!-- GPU -->
+  <rect x="530" y="114" width="150" height="92" rx="7" fill="#fff" stroke="#86efac" stroke-width="1"/>
+  <rect x="530" y="114" width="150" height="26" rx="7" fill="#d1fae5"/>
+  <text x="605" y="132" text-anchor="middle" font-size="11" font-weight="600" fill="#065f46">GPU Nodes</text>
+  <text x="544" y="156" font-size="10" fill="#047857">H200 (140 GB)</text>
+  <text x="544" y="170" font-size="10" fill="#047857">A100 (80 GB)  /  V100 (32 GB)</text>
+  <text x="544" y="196" font-size="9" fill="#6b7280" font-style="italic">gpu, gpu-short, courses-gpu</text>
+
+  <!-- CPU -->
+  <rect x="698" y="114" width="140" height="92" rx="7" fill="#fff" stroke="#86efac" stroke-width="1"/>
+  <rect x="698" y="114" width="140" height="26" rx="7" fill="#d1fae5"/>
+  <text x="768" y="132" text-anchor="middle" font-size="11" font-weight="600" fill="#065f46">CPU Nodes</text>
+  <text x="712" y="156" font-size="10" fill="#047857">General compute</text>
+  <text x="712" y="170" font-size="10" fill="#047857">Data preprocessing</text>
+  <text x="712" y="196" font-size="9" fill="#6b7280" font-style="italic">short, courses</text>
+
+  <!-- Big Memory -->
+  <rect x="530" y="222" width="150" height="60" rx="7" fill="#fff" stroke="#86efac" stroke-width="1"/>
+  <rect x="530" y="222" width="150" height="26" rx="7" fill="#d1fae5"/>
+  <text x="605" y="240" text-anchor="middle" font-size="11" font-weight="600" fill="#065f46">Big Memory</text>
+  <text x="544" y="266" font-size="10" fill="#047857">Large datasets in RAM</text>
+
+  <!-- Interactive -->
+  <rect x="698" y="222" width="140" height="60" rx="7" fill="#fff" stroke="#86efac" stroke-width="1"/>
+  <rect x="698" y="222" width="140" height="26" rx="7" fill="#d1fae5"/>
+  <text x="768" y="240" text-anchor="middle" font-size="11" font-weight="600" fill="#065f46">Interactive</text>
+  <text x="712" y="266" font-size="10" fill="#047857">Debugging, Jupyter</text>
+
+  <!-- Storage -->
+  <rect x="530" y="300" width="308" height="44" rx="7" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+  <text x="544" y="320" font-size="11" font-weight="600" fill="#065f46">Storage:</text>
+  <text x="544" y="336" font-size="10" fill="#047857">/home (~50 GB)  |  /scratch (~10 TB)  |  /courses (1 TB)</text>
+</svg>
